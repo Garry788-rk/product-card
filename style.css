@@ -12,12 +12,23 @@
     background-color: #F7F7FA;
 }
 
+.product-header {  
+    margin-top: 30px;
+    margin-bottom: 15px;
+    
+    gap: 5px;
+}
+
 .product-compound {
     margin-left: 0px;
     padding-left: 0px;
     list-style-position: inside;
+    margin-bottom: 25px;
 }
 
+.card{ 
+     background-image: url('/images/card fone.jpg');  
+}
    
 
 
