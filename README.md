@@ -1,5 +1,5 @@
 # product-card
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -88,7 +88,7 @@
                 </ul>
                 <ul class="product-list">    
                     <li> 
-                        <img src="images/Gift_Set_Number_Five.jpg" alt="Подарочный набор № 5" style="width: 290px;"/>
+                        <img src="/images/Gift_Set_Number_Five.jpg" alt="Подарочный набор № 5" style="width: 290px;"/>
                         <ul class="product-header"> 
                         <span>Для нормальной кожи</span>
                         <h6>Подарочный набор №5</h6>
