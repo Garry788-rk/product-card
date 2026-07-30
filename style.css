@@ -4,10 +4,11 @@
     padding: 0;
 }
 
-.product { 
+.product-list { 
     width: 340px;
     height: 573px;
     padding: 25px;
+    list-style-type: none;
     background-color: #F7F7FA;
 }
 
@@ -16,3 +17,7 @@
     padding-left: 0px;
     list-style-position: inside;
 }
+
+   
+
+
