@@ -4,7 +4,22 @@
     padding: 0;
 }
 
+.product-title {
+    font-family: 'Montserrat', sans-serif;
+    width: 846px;
+    height: 78px;
+    font-size: 70px;
+    font-weight: 400;
+    color: #515076;
+    text-align: center;
+    font-style: regular;
+    top: 220px;
+    left: 217px;
+}
+
 .product-list { 
+    display: inline-block;
+    flex-wrap: wrap;
     width: 340px;
     height: 573px;
     padding: 25px;
