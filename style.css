@@ -2,22 +2,28 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  
 }
 
 .product-list { 
+    display: flex;
+    flex-wrap: wrap;
+    margin: 45px;
     width: 340px;
     height: 573px;
     padding: 25px;
-    list-style-type: none;
     background-color: #F7F7FA;
 }
 
 .product-compound {
     margin-left: 0px;
     padding-left: 0px;
-    list-style-position: inside;
+  
 }
 
-   
-
+.product-title { 
+    font-family: 'Montserrat', sans-serif;
+    color:#515076;
+  
+}   
 
