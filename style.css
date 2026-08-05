@@ -18,7 +18,7 @@
 }
 
 .product-list { 
-    display: inline-block;
+    display: flex;
     flex-wrap: wrap;
     width: 340px;
     height: 573px;
