@@ -20,9 +20,6 @@
 .product-list { 
     display: flex;
     flex-wrap: wrap;
-    width: 340px;
-    height: 573px;
-    padding: 25px;
     list-style-type: none;
     background-color: #F7F7FA;
 }
@@ -34,8 +31,6 @@
 }
 
 .product-compound {
-    margin-left: 0px;
-    padding-left: 0px;
     list-style-position: inside;
     margin-bottom: 25px;
 }
