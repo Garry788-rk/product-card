@@ -5,6 +5,9 @@
 }
 
 .product-title {
+    background-image:url('/images/card_fone.jpg');
+    background-repeat: no-repeat;
+    background-position: left;  
     font-family: 'Montserrat', sans-serif;
     width: 846px;
     font-size: 70px;
@@ -13,6 +16,8 @@
     text-align: center;
     font-style: regular;
     margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 100px 0 100px 0;
 }
 
 .product-list { 
@@ -35,9 +40,6 @@
     margin-bottom: 25px;
 }
 
-.card{ 
-    background-image: url('/images/card_fone.jpg');  
-}
    
 
 
