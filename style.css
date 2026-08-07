@@ -7,7 +7,6 @@
 .product-title {
     font-family: 'Montserrat', sans-serif;
     width: 846px;
-    height: 78px;
     font-size: 70px;
     font-weight: 400;
     color: #515076;
@@ -30,7 +29,6 @@
     width: 340px;
     padding: 25px;
     background-color: #F7F7FA;
-
 }
 
 .product-compound {
@@ -39,7 +37,7 @@
 }
 
 .card{ 
-     background-image: url('/images/card_fone.jpg');  
+    background-image: url('/images/card_fone.jpg');  
 }
    
 
