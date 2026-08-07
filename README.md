@@ -12,34 +12,26 @@
     </head>
         <body class="card">
             <h1>Выбери свой продукт</h1>
-                <ul class="product-list">                                   
-                    <li>      
-                        <img src="/images/muss_diamaint.jpg" alt="Увлажняющий мусс" style="width: 290px;"/>
-                        <ul class="product-header">  
+                <ul class="product-list">                                 
+                    <li class="product-header">      
+                        <img src="/images/muss_diamaint.jpg" alt="Увлажняющий мусс" style="width: 290px;"/>  
                         <span>для нормальной кожи</span>
                         <h2>Увлажняющий мусс</h2>
                         <p>Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
-                        </ul> 
                         <span>Состав:</span>    
                         <ul class="product-compound"> 
                             <li>активные натуральные комплексы</li>
                             <li>витамины С, А, РР, В И Е</li>
                             <li>солнце защитные компоненты</li>
                         </ul> 
-                        <ul> 
                         <b>Цена:</b>
                         <span>2 750 &#8381;</span>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="product-list">  
-                    <li>
-                        <img src="/images/mask_diamaint.jpg" alt="Увлажняющая маска" style="width: 290px;"/>
-                        <ul class="product-header">  
+                    </li>  
+                    <li class="product-header"> 
+                        <img src="/images/mask_diamaint.jpg" alt="Увлажняющая маска" style="width: 290px;"/> 
                         <span>для нормальной кожи</span>
                         <h3>Увлажняющая маска</h3>
-                        <p>Способствует удерживанию влаги в верхних слоях кожи.</p>
-                        </ul>   
+                        <p>Способствует удерживанию влаги в верхних слоях кожи.</p> 
                         <span>Состав:</span>
                         <ul class="product-compound">  
                             <li>воски</li>
@@ -49,15 +41,11 @@
                         <b>Цена:</b>
                         <span >Цена 3 500  &#8381;</span>
                     </li>
-                </ul>
-                <ul class="product-list"> 
-                    <li>
-                        <img src="/images/the_gel_diamaint.jpg" alt="Гель для умывания" style="width: 290px;"/>
-                        <ul class="product-header">  
+                    <li class="product-header">
+                        <img src="/images/the_gel_diamaint.jpg" alt="Гель для умывания" style="width: 290px;"/>  
                         <span>для нормальной кожи</span>
                         <h4>Гель для умывания</h4>
                         <p>Интенсивно очищает, не повреждает защитный барьер кожи.</p>
-                        </ul> 
                         <span>Состав:</span>
                         <ul class="product-compound"> 
                             <li>минералы</li>
@@ -66,16 +54,12 @@
                         </ul>
                         <b>Цена:</b>
                         <span>1 650 &#8381;</span>
-                    </li>
-                </ul>                
-                <ul class="product-list"> 
-                    <li>
-                        <img src="/images/Gift_set_diamaint.jpg" alt="Подарочный набор № 1" style="width: 290px;"/>
-                        <ul class="product-header">  
+                    </li>                 
+                    <li class="product-header">
+                        <img src="/images/Gift_set_diamaint.jpg" alt="Подарочный набор № 1" style="width: 290px;"/>  
                         <span>для нормальной кожи</span>
                         <h5>Подарочный набор № 1</h5>
-                        <p>Набор, состоящий из увлажняющего крема и маски.</p>
-                        </ul>   
+                        <p>Набор, состоящий из увлажняющего крема и маски.</p>  
                         <span>Состав:</span>
                         <ul class="product-compound"> 
                             <li>воски</li>
@@ -84,16 +68,12 @@
                         </ul> 
                         <b>Цена:</b>
                         <span>4 750  &#8381;</span>
-                    </li>
-                </ul>
-                <ul class="product-list">    
-                    <li> 
+                    </li>   
+                    <li class="product-header"> 
                         <img src="/images/Gift_Set_Number_Five.jpg" alt="Подарочный набор № 5" style="width: 290px;"/>
-                        <ul class="product-header"> 
                         <span>Для нормальной кожи</span>
                         <h6>Подарочный набор №5</h6>
                         <p>Весь набор средств Invisible symphony крем, маска, мусс и гель для умывания</p>
-                        </ul>
                         <span>Состав:</span>
                         <ul class="product-compound"> 
                             <li>воски</li>
@@ -102,6 +82,5 @@
                         </ul>
                     </li>
                 </ul>
-
         </body>
 </html>
