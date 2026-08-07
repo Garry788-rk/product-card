@@ -21,13 +21,16 @@
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    background-color: #F7F7FA;
+    justify-content: center;
+    gap: 30px;
 }
 
 .product-header {  
-    margin-top: 30px;
-    margin-bottom: 15px;
     gap: 5px;
+    width: 340px;
+    padding: 25px;
+    background-color: #F7F7FA;
+
 }
 
 .product-compound {
