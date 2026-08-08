@@ -4,31 +4,42 @@
     padding: 0;
 }
 
+.product-title {
+    background-image:url('/images/card_fone.jpg');
+    background-repeat: no-repeat;
+    background-position: left;  
+    font-family: 'Montserrat', sans-serif;
+    width: 846px;
+    font-size: 70px;
+    font-weight: 400;
+    color: #515076;
+    text-align: center;
+    font-style: regular;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 100px 0 100px 0;
+}
+
 .product-list { 
-    width: 340px;
-    height: 573px;
-    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
-    background-color: #F7F7FA;
+    justify-content: center;
+    gap: 60px;
 }
 
 .product-header {  
-    margin-top: 30px;
-    margin-bottom: 15px;
-    
-    gap: 5px;
+    gap: 30px;
+    width: 340px;
+    padding: 25px;
+    background-color: #F7F7FA;
 }
 
 .product-compound {
-    margin-left: 0px;
-    padding-left: 0px;
     list-style-position: inside;
     margin-bottom: 25px;
 }
 
-.card{ 
-     background-image: url('/images/card_fone.jpg');  
-}
    
 
 
