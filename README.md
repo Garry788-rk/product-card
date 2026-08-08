@@ -36,15 +36,15 @@
                         <ul class="product-compound">  
                             <li>воски</li>
                             <li>минералы</li>
-                            <li>масла</li>
+                             <li>масла</li>
                         </ul> 
                         <b>Цена:</b>
-                        <span >Цена 3 500  &#8381;</span>
+                        <span >3 500  &#8381;</span>
                     </li>
                     <li class="product-header">
                         <img src="/images/the_gel_diamaint.jpg" alt="Гель для умывания" style="width: 290px;"/>  
                         <span>для нормальной кожи</span>
-                        <h4>Гель для умывания</h4>
+                        <h2>Гель для умывания</h2>
                         <p>Интенсивно очищает, не повреждает защитный барьер кожи.</p>
                         <span>Состав:</span>
                         <ul class="product-compound"> 
@@ -72,7 +72,7 @@
                     <li class="product-header"> 
                         <img src="/images/Gift_Set_Number_Five.jpg" alt="Подарочный набор № 5" style="width: 290px;"/>
                         <span>Для нормальной кожи</span>
-                        <h6>Подарочный набор №5</h6>
+                        <h2>Подарочный набор №5</h2>
                         <p>Весь набор средств Invisible symphony крем, маска, мусс и гель для умывания</p>
                         <span>Состав:</span>
                         <ul class="product-compound"> 
@@ -80,7 +80,9 @@
                             <li>минералы</li>
                             <li>масла</li>
                         </ul>
-                    </li>
+                        <b>Цена:</b>
+                        <span>7 520  &#8381;</span>
+                    </li>    
                 </ul>
         </body>
 </html>
