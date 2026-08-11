@@ -1,0 +1,89 @@
+*,
+ *::before,
+ *::after {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+
+}
+
+.card {
+   background-color: #F7F7FA;
+   padding: 25px;
+   width: 100%;
+
+}
+
+.card__image {
+    display: block;
+}
+
+.card__category {
+    display: block;
+    font-size: 13px;
+    line-height: 18px;
+    color: #8c8c8c;
+    text-transform: uppercase;
+    }
+
+.card__description {
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+}
+
+.clear-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}   
+
+.products { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+}
+
+.product__item {
+   width: 340px;
+}
+
+.product__item--big {
+    width: 600px;
+}
+
+.sidebar__product { 
+  width: 500px;
+}
+
+.title {
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 78px;
+    margin: 0;
+    text-align: center;
+    color: #515076 ;
+}
+
+.catalog__title {  
+    margin-top: 50px; 
+    margin-bottom: 110px;
+}
+
+.container {   
+    width: 1110px;
+    margin: 0 auto;
+
+}
+
+.catalog__container {   
+    background-image: url(  /images/card_fone.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-top: 170px;
+}

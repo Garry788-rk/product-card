@@ -12,7 +12,7 @@
     </head>
         <body>
             <h1>Выбери свой продукт</h1>
-                <ul class="product-list">                                 
+                <ul class="product-">                                 
                     <li class="product-header">      
                         <img src="/images/muss_diamaint.jpg" alt="Увлажняющий мусс" style="width: 290px;"/>  
                         <span>для нормальной кожи</span>
