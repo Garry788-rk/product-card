@@ -5,37 +5,72 @@
 }
 
 .body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat,sans-serif;
     font-size: 13px;
     line-height: 18px;
-
 }
 
 .card {
    background-color: #F7F7FA;
    padding: 25px;
    width: 100%;
-
 }
 
 .card__image {
     display: block;
+    width: 290 px;
+    height: 245px;
 }
 
 .card__category {
     display: block;
     font-size: 13px;
     line-height: 18px;
-    color: #8c8c8c;
+    color: #A5A3B9;
     text-transform: uppercase;
     }
+
+.card__name {   
+    color: #515076;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    list-style: bold;
+    letter-spacing: 0%;
+}
 
 .card__description {
     font-size: 13px;
     line-height: 18px;
     color: #515076;
+    font-weight: 400;
+
 }
 
+.card__compound {
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+    font-weight: 400;
+    list-style: Regular;
+    letter-spacing: 0%;
+}
+
+.price-row {
+    display: flex;
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+    padding-bottom: 25px;
+}
+.prce-label {
+    margin-right: auto;
+    font-weight: 700;
+}  
+
+.price-value {   
+    margin-left: auto;
+}
 .clear-list {
     list-style-type: none;
     padding: 0;
@@ -49,11 +84,11 @@
     gap: 45px;
 }
 
-.product__item {
+.products__item {
    width: 340px;
 }
 
-.product__item--big {
+.products__item--big {
     width: 600px;
 }
 
@@ -70,7 +105,7 @@
     color: #515076 ;
 }
 
-.catalog__title {  
+.catalog-title {  
     margin-top: 50px; 
     margin-bottom: 110px;
 }
@@ -81,7 +116,7 @@
 
 }
 
-.catalog__container {   
+.catalog-container {   
     background-image: url(  /images/card_fone.png);
     background-repeat: no-repeat;
     background-position: 0 0;
