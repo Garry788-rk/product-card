@@ -1,45 +1,121 @@
-* {
+*,
+ *::before,
+ *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
-.product-title {
-    background-image:url('/images/card_fone.jpg');
-    background-repeat: no-repeat;
-    background-position: left;  
-    font-family: 'Montserrat', sans-serif;
-    width: 846px;
-    font-size: 70px;
-    font-weight: 400;
+.body {
+    font-family: Montserrat,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.card {
+   background-color: #F7F7FA;
+   padding: 25px;
+   width: 100%;
+}
+
+.card__image {
+    display: block;
+    width: 290 px;
+    height: 245px;
+}
+
+.card__category {
+    display: block;
+    font-size: 13px;
+    line-height: 18px;
+    color: #A5A3B9;
+    text-transform: uppercase;
+    margin-top: 30px;
+    }
+
+.card__name {   
     color: #515076;
-    text-align: center;
-    font-style: regular;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    padding: 100px 0 100px 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    list-style: bold;
+    letter-spacing: 0%;
 }
 
-.product-list { 
+.card__description {
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+    font-weight: 400;
+    letter-spacing: 0%;
+    list-style: Regular;
+}
+
+.card__compound {
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+    font-weight: 400;
+    letter-spacing: 0%;
+
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    color: #515076;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 24px;
+}
+.prce-label {
+    margin-right: auto;
+    font-weight: 700;
+}  
+
+.price-value {   
+    margin-left: auto;
+    
+}
+.clear-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}   
+
+.products { 
     display: flex;
     flex-wrap: wrap;
-    list-style-type: none;
     justify-content: center;
-    gap: 60px;
+    gap: 45px;
 }
 
-.product-header {  
-    gap: 30px;
-    width: 340px;
-    padding: 25px;
-    background-color: #F7F7FA;
+.products__item {
+   max-width: 340px;
 }
 
-.product-compound {
-    list-style-position: inside;
-    margin-bottom: 25px;
+.title {
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 78px;
+    margin: 0;
+    text-align: center;
+    color: #515076 ;
 }
 
-   
+.catalog-title {  
+    margin-top: 50px; 
+    margin-bottom: 110px;
+}
 
+.container {   
+    width: 1110px;
+    margin: 0 auto;
 
+}
+
+.catalog-container {   
+    background-image: url(  /images/card_fone.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-top: 170px;
+}
