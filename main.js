@@ -33,3 +33,10 @@ outputConsoleLogBtn.addEventListener('click', () => (outputconsolelog('homework 
     alert(message) 
     console.log(message)
 }
+
+const titleCatalogTitle = document.getElementById('.title catalog-title');
+title catalog-title.addEventListener('mouseover',function( ) { 
+const conent = titleCatalogTitle.innerText;
+
+сonsole.log(conent);
+})
