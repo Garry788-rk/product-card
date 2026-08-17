@@ -90,7 +90,13 @@
 }
 
 .products__item {
-   max-width: 340px;
+    max-width: 340px;
+    background-color: #D5D5D5;
+    transition: background-color 0.3s ease;
+}
+
+.products__item.is-orange {
+  background-color: #FFA500;
 }
 
 .title {

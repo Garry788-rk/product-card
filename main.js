@@ -1,36 +1,51 @@
-const products = document.querySelectorAll('.products__item');
-const changeColorAllBtn = document.querySelector('#change-Color-all-cards');
-const greenColorHash = '#4CAF50';
-const blueColorHash = '#2196F3';
+document.addEventListener('DOMContentLoaded', () => {   
+    const products = document.querySelectorAll('.products__item');
+    const changeColorAllBtn = document.querySelector('#change-Color-all-cards');
+    const greenColorHash = '#4CAF50';
+    const blueColorHash = '#2196F3';
 
+    changeColorAllBtn.addEventListener('click', () => {
+        products.forEach((card) => card.style.backgroundColor = greenColorHash)
+        });
 
-changeColorAllBtn.addEventListener('click', () => {
-    products.forEach((card) => card.style.backgroundColor = greenColorHash)
+    const firstProducts = document.querySelector('.products__item');
+    const changeColorFirstBtn = document.querySelector('#change-Color-first-card');
+
+    changeColorFirstBtn.addEventListener('click', () => {
+        firstProducts.style.backgroundColor = blueColorHash;
+        });
+
+    const toggleButton = document.getElementById('toggle-сards')
+
+    const toggleCardColors = () => { 
+        products.forEach(card => {
+            products.classList.toggle('is-orange');
+        }); 
+    };
+        if (toggleButton) {
+            toggleButton.addEventListener('click',toggleCardColors); 
+         }
       
-    });
+    const openGoogleBtn = document.querySelector('#open-google');
+        openGoogleBtn.addEventListener('click',openGoogle)
+            window.open('https://www.google.com')
 
-const firstProducts = document.querySelector('.products__item');
-const changeColorFirstBtn = document.querySelector('#change-Color-first-card');
+    function openGoogle() 
+    {const answer = confirm('Вы хотите открыть страницу google.com?');
+        if (answer==true) {
+            window.open('https://www.google.com');
+        } else {return;}
+        }
 
-  changeColorFirstBtn.addEventListener('click', () => {
-    firstProducts.style.backgroundColor = blueColorHash;
-    });
-
-const openGoogleBtn = document.querySelector('#open-google');
-    openGoogleBtn.addEventListener('click',openGoogle)
-        window.open('https://www.google.com')
-
-function openGoogle() 
-{const answer = confirm('Вы хотите открыть страницу google.com?');
-    if (answer==true) {
-        window.open('https://www.google.com');
-    } else {return;}
+    const outputConsoleLogBtn = document.querySelector('#output-console-log');
+    outputConsoleLogBtn.addEventListener('click', () => outputConsoleLog('homework 6'));
+    function outputConsoleLog(message) {  
+        alert(message); 
+        console.Log(message);
     }
 
-const outputConsoleLogBtn = document.querySelector('#output-console-log');
-outputConsoleLogBtn.addEventListener('click', () => (outputСonsolelog('homework 6')));
-  function outputСonsolelog(message) {  
-    alert(message); 
-    console.log(message);
-}
-
+    const title = document.querySelector('.title.catalog-title');
+    title.addEventListener('mouseover', (event) => { 
+        console.log (event.currentTarget.textContent);
+    })
+})
