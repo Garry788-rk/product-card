@@ -28,15 +28,9 @@ function openGoogle()
     }
 
 const outputConsoleLogBtn = document.querySelector('#output-console-log');
-outputConsoleLogBtn.addEventListener('click', () => (outputconsolelog('homework 6')));
-  function outputconsolelog(message) {  
-    alert(message) 
-    console.log(message)
+outputConsoleLogBtn.addEventListener('click', () => (outputСonsolelog('homework 6')));
+  function outputСonsolelog(message) {  
+    alert(message); 
+    console.log(message);
 }
 
-const titleCatalogTitle = document.getElementById('.title catalog-title');
-title catalog-title.addEventListener('mouseover',function( ) { 
-const conent = titleCatalogTitle.innerText;
-
-сonsole.log(conent);
-})
