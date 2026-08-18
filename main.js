@@ -15,17 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
         firstProducts.style.backgroundColor = blueColorHash;
         });
 
-    const toggleButton = document.getElementById('toggle-сards')
+    const button = document.getElementById('color-toggle-button');
 
-    const toggleCardColors = () => { 
-        products.forEach(card => {
-            products.classList.toggle('is-orange');
-        }); 
-    };
-        if (toggleButton) {
-            toggleButton.addEventListener('click',toggleCardColors); 
-         }
-      
+        if (button) {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+        });
+        } else {
+        console.error('Кнопка с id="color-toggle-button" не найдена');
+        }
+
+
+
     const openGoogleBtn = document.querySelector('#open-google');
         openGoogleBtn.addEventListener('click',openGoogle)
             window.open('https://www.google.com')
