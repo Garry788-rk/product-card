@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openGoogleBtn = document.querySelector('#open-google');
         openGoogleBtn.addEventListener('click',openGoogle)
-            window.open('https://www.google.com')
 
     function openGoogle() 
     {const answer = confirm('Вы хотите открыть страницу google.com?');
@@ -47,5 +46,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = document.querySelector('.title.catalog-title');
     title.addEventListener('mouseover', (event) => { 
         console.log (event.currentTarget.textContent);
+        })
     })
-})
