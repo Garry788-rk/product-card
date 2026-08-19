@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {   
     const products = document.querySelectorAll('.products__item');
-    const changeColorAllBtn = document.querySelector('#change-Color-all-cards');
+    const changeColorAllBtn = document.querySelector('#change-color-all-cards');
     const greenColorHash = '#4CAF50';
     const blueColorHash = '#2196F3';
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     const firstProducts = document.querySelector('.products__item');
-    const changeColorFirstBtn = document.querySelector('#change-Color-first-card');
+    const changeColorFirstBtn = document.querySelector('#change-color-first-card');
 
     changeColorFirstBtn.addEventListener('click', () => {
         firstProducts.style.backgroundColor = blueColorHash;
