@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
 
-
     const openGoogleBtn = document.querySelector('#open-google');
         openGoogleBtn.addEventListener('click',openGoogle)
             window.open('https://www.google.com')
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     outputConsoleLogBtn.addEventListener('click', () => outputConsoleLog('homework 6'));
     function outputConsoleLog(message) {  
         alert(message); 
-        console.Log(message);
+        console.log(message);
     }
 
     const title = document.querySelector('.title.catalog-title');
