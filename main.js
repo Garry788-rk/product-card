@@ -1,30 +1,15 @@
-<<<<<<< HEAD
-document.addEventListener("DOMContentLoaded", () => {
-  const products = document.querySelectorAll(".products__item");
-  const changeColorAllBtn = document.querySelector("#change-Color-all-cards");
-  const greenColorHash = "#4CAF50";
-  const blueColorHash = "#2196F3";
-=======
 document.addEventListener('DOMContentLoaded', () => {   
-    const products = document.querySelectorAll('.products__item');
-    const changeColorAllBtn = document.querySelector('#change-color-all-cards');
-    const greenColorHash = '#4CAF50';
-    const blueColorHash = '#2196F3';
->>>>>>> 57d07a2a1472d7d16b5bee667ccf2ccdb1c9c862
+  const products = document.querySelectorAll('.products__item');
+  const changeColorAllBtn = document.querySelector('#change-color-all-cards');
+  const greenColorHash = '#4CAF50';
+  const blueColorHash = '#2196F3';
 
   changeColorAllBtn.addEventListener("click", () => {
     products.forEach((card) => (card.style.backgroundColor = greenColorHash));
   });
 
-<<<<<<< HEAD
-  const firstProducts = document.querySelector(".products__item");
-  const changeColorFirstBtn = document.querySelector(
-    "#change-Color-first-card",
-  );
-=======
-    const firstProducts = document.querySelector('.products__item');
-    const changeColorFirstBtn = document.querySelector('#change-color-first-card');
->>>>>>> 57d07a2a1472d7d16b5bee667ccf2ccdb1c9c862
+  const firstProducts = document.querySelector('.products__item');
+  const changeColorFirstBtn = document.querySelector('#change-color-first-card');
 
   changeColorFirstBtn.addEventListener("click", () => {
     firstProducts.style.backgroundColor = blueColorHash;
@@ -42,54 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const openGoogleBtn = document.querySelector("#open-google");
   openGoogleBtn.addEventListener("click", openGoogle);
-  window.open("https://www.google.com");
-
-<<<<<<< HEAD
-  function openGoogle() {
-    const answer = confirm("Вы хотите открыть страницу google.com?");
-    if (answer == true) {
-      window.open("https://www.google.com");
-    } else {
-      return;
-=======
-    const openGoogleBtn = document.querySelector('#open-google');
-        openGoogleBtn.addEventListener('click',openGoogle)
 
     function openGoogle() 
     {const answer = confirm('Вы хотите открыть страницу google.com?');
-        if (answer==true) {
+
+        if (answer) {
             window.open('https://www.google.com');
         } else {return;}
         }
 
     const outputConsoleLogBtn = document.querySelector('#output-console-log');
+
     outputConsoleLogBtn.addEventListener('click', () => outputConsoleLog('homework 6'));
+
     function outputConsoleLog(message) {  
         alert(message); 
         console.log(message);
->>>>>>> 57d07a2a1472d7d16b5bee667ccf2ccdb1c9c862
     }
-  }
-
-<<<<<<< HEAD
-  const outputConsoleLogBtn = document.querySelector("#output-console-log");
-  outputConsoleLogBtn.addEventListener("click", () =>
-    outputConsoleLog("homework 6"),
-  );
-  function outputConsoleLog(message) {
-    alert(message);
-    console.Log(message);
-  }
-
-  const title = document.querySelector(".title.catalog-title");
-  title.addEventListener("mouseover", (event) => {
-    console.log(event.currentTarget.textContent);
-  });
-});
-=======
-    const title = document.querySelector('.title.catalog-title');
-    title.addEventListener('mouseover', (event) => { 
-        console.log (event.currentTarget.textContent);
-        })
-    })
->>>>>>> 57d07a2a1472d7d16b5bee667ccf2ccdb1c9c862
+  })
