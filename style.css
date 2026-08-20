@@ -119,3 +119,15 @@
     background-position: 0 0;
     padding-top: 170px;
 }
+
+.color-button {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.color-button.active {
+  background-color: #ff5722;
+  color: #fff;
+}
