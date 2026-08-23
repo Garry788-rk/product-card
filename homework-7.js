@@ -30,3 +30,29 @@ compareSpeed(100);
 compareSpeed(3000000000);
 compareSpeed(false);
 compareSpeed("текст");
+
+let trainingCourse = "AI Engineering"
+let cost = 1000
+
+const budget = (currentBalance) => {
+
+  if (currentBalance >= cost) {
+    console.log(
+      `Курс приобретен ${trainingCourse} Спасибо за покупку!`
+    );
+  }
+  else {
+    let deficit = cost - currentBalance;
+
+    console.log(
+      `Недостаточно средств для покупки курса ${trainingCourse}. Не хватает ${deficit}USD`
+    );
+  }
+}
+budget(1000);
+budget(500);
+
+
+  
+
+  
