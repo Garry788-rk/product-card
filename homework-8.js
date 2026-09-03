@@ -46,7 +46,7 @@ getcarproperty(car, "model");
 // выполнил 6 пункт задания
 
 const theFivePillarsOfIslam = ["Шахада", "Намаз", "Зякат", "Пост", "Хадж"];
-console.log(TheFivePillarsOfIslam);
+console.log(theFivePillarsOfIslam);
 // массив со строками 7 пункт
 
 const islamBooks = [
