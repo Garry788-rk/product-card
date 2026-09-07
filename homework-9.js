@@ -1,20 +1,34 @@
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const filteredNumbers = numbers.filter((number) => number > 5);
-
 console.log(filteredNumbers);
 
-const clothes = ["хoodie", "t - shirt", "jeans", "jacket", "sneakers"];
-const hasJacket = clothes.includes("jacket");
-const hasSocks = clothes.includes("socks");
+const reversedNumbers = numbers.reverse();
+function reversedNumbersArray(arr) {
+  if (!Array.isArray(arr)) {
+    return "Incorrect data type. Please provide an array";
+  }
+  return [...arr].reverse();
+}
+console.log("reversedNumbers:", numbers);
 
-console.log(hasJacket);
-console.log(hasSocks);
-
-const reverseNumbers = numbers.reverse();
-console.log(reverseNumbers);
-
+const clothes = ["hoodie", "t - shirt", "jeans", "jacket", "sneakers"];
+function hasClothes(clothesName) {
+  if (typeof clothesName !== "string") {
+    return "Incorrect data type. Please provide a string";
+  }
+  return clothes.includes(clothesName);
+}
 const reversedClothes = clothes.reverse();
-console.log(reversedClothes);
+function reversedClothesArray(arr) {
+  if (!Array.isArray(arr)) {
+    return "Incorrect data type. Please provide an array";
+  }
+  return [...arr].reverse();
+}
+console.log(hasClothes("jacket"));
+console.log(hasClothes("socks"));
+console.log(hasClothes(10));
+console.log("reversedClothes:", clothes);
 
 import { comments } from "./comments.js";
 console.log(comments);
