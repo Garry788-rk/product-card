@@ -14,7 +14,7 @@ function renderCard(productArray, count) {
   const container = document.getElementById("catalog-container");
   if (!container) {
     console.error("Container element not found");
-    retur;
+    return;
   }
 
   container.innerHTML = '';
