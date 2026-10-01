@@ -14,7 +14,7 @@ function renderCard(productArray, count) {
   const container = document.getElementById("catalog-container");
   if (!container) {
     console.error("Container element not found");
-    return 0;
+    retur;
   }
 
   container.innerHTML = '';
@@ -28,6 +28,7 @@ function renderCard(productArray, count) {
       <h3>${product.name}</h3>
       <p>${product.description}</p>
       <p>Цена: ${product.price} руб.</p>
+      <img src="${product.image}" alt="${product.name}" style="max-width: 100%;">
     `;
     container.appendChild(card);
   });
