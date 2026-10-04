@@ -3,43 +3,70 @@ import { products } from "./products.js";
 function getCardCount() {
   let count;
   do {
-    count = parseInt(prompt("Какое количество отобразить (от 1 до 5):"), 10);
+    count = parseInt(
+      prompt("Какое количество товаров отобразить (от 1 до 5)?"),
+      10,
+    );
   } while (isNaN(count) || count < 1 || count > 5);
   return count;
 }
 
-const count = getCardCount();
+function renderProducts(productArray, count) {
+  const template = document.getElementById("product-card-template");
+  const list = document.getElementById("products-list");
 
-function renderCard(productArray, count) {
-  const container = document.getElementById("catalog-container");
-  if (!container) {
-    console.error("Container element not found");
+  if (!template) {
+    console.error("Не найден шаблон #product-card-template в HTML");
+    return;
+  }
+  if (!list) {
+    console.error("Не найден список #products-list в HTML");
     return;
   }
 
-  container.innerHTML = '';
+  list.innerHTML = "";
 
-  const limitedProducts = productArray.slice(0, Math.min(count, productArray.length));
+  const limitedProducts = productArray.slice(
+    0,
+    Math.min(count, productArray.length),
+  );
 
   limitedProducts.forEach((product) => {
-    const card = document.createElement("div");
-    card.className = "product-card";
-    card.innerHTML = `
-      <h3>${product.name}</h3>
-      <p>${product.description}</p>
-      <p>Цена: ${product.price} руб.</p>
-      <img src="${product.image}" alt="${product.name}" style="max-width: 100%;">
-    `;
-    container.appendChild(card);
+    const card = template.content.cloneNode(true);
+
+    const imgEl = card.querySelector(".card__image");
+    if (imgEl) {
+      imgEl.src = product.image || "";
+      imgEl.alt = product.name || "Товар";
+    }
+
+    const categoryEl = card.querySelector(".card__category");
+    if (categoryEl) categoryEl.textContent = product.category || "";
+
+    const nameEl = card.querySelector(".card__name");
+    if (nameEl) nameEl.textContent = product.name || "";
+
+    const descEl = card.querySelector(".card__description");
+    if (descEl) descEl.textContent = product.description || "";
+
+    const compoundList = card.querySelector(".compound__list");
+    if (compoundList && Array.isArray(product.compound)) {
+      compoundList.innerHTML = "";
+      product.compound.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        compoundList.appendChild(li);
+      });
+    }
+
+    const priceEl = card.querySelector(".price-value");
+    if (priceEl) priceEl.textContent = `${product.price} ₽`;
+
+    list.appendChild(card);
   });
 }
 
-
-renderCard(products, count); 
-
-const productDescriptions = products.reduce((acc, product) => {
-  acc[product.name] = product.description;
-  return acc;
-}, {});
-
-console.log("Описания по названиям:", productDescriptions);
+document.addEventListener("DOMContentLoaded", () => {
+  const count = getCardCount();
+  renderProducts(products, count);
+});
