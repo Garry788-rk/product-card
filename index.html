@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,116 +11,38 @@
     </head>
         <body>
             <main class="container">
-                <div class="container catalog-container">
+                <div id="catalog-container">
                     <h1 class="title catalog-title">Выбери свой продукт</h1>
                     <button id="color-toggle-button" class="color-button">Переключать цвет</button>
                     <button id="change-color-all-cards">Сменить цвет всех карточек</button>
                     <button id="change-color-first-card">Сменить цвет первой карточки</button>
                     <button id="open-google">Открыть страницу google.com</button>
                     <button id="output-console-log">Вывести сообщение в консоль</button>
-                    <ul class="products clear-list">                                   
-                        <li class="products__item card">   
-                            <img src="/images/muss_diamaint.jpg" alt="" class="card__image">
-                            <span class="card__category">для нормальной кожи</span>
-                            <h2 class="card__name">Увлажняющий мусс</h2>
-                            <p class="card__description">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
-                            <span class="card__compound">Состав:</span>
-                                
+                        <template id="product-card-template">
+                            <li class="products__item card">
+                                <img src="" alt="" class="card__image">
+                                <span class="card__category"></span>
+                                <h2 class="card__name"></h2>
+                                <p class="card__description"></p>
+                                <span class="card__compound">Состав:</span>
                             <div class="card__compound compound">
-                                <ul>  
-                                    <li>активные натуральные комплексы</li>
-                                    <li>витамины С, А, РР, В И Е</li>
-                                    <li>солнце защитные компоненты</li>
-                                </ul>
-                            </div>
-                            <div class="price-row"> 
-                                <b class="prce-label">Цена:</b>
-                                <span class="prce-value">2 750 &#8381;</span>
-                            </div>
-                        </li>
-                                                            
-                        <li class="products__item card">
-                            <img src="/images/mask_diamaint.jpg" alt="" class="card__image">
-                            <span class="card__category">для нормальной кожи</span>
-                            <h2 class="card__name">Увлажняющая маска</h2>
-                            <p class="card__description">Способствует удерживанию влаги в верхних слоях кожи.</p>     
-                            <span class="card__description" >Состав:</span>
-
-                            <div class="card__compound compound">
-                                <ul>  
-                                    <li>воски</li>
-                                    <li>минералы</li>
-                                    <li>масла</li>
-                                </ul>
+                                <ul class="compound__list"></ul>
                             </div>
                             <div class="price-row">
-                                <b class="prce-label">Цена:</b>
-                                <span class="prce-value">3 500  &#8381;</span>
+                                <b class="price-label">Цена:</b>
+                                <span class="price-value"></span>
                             </div>
-                        </li>
-                        <li class="products__item card">
-                            <img src="/images/the_gel_diamaint.jpg" alt="" class="card__image">
-                            <span class="card__category">для нормальной кожи</span>
-                            <h2 class="card__name">Гель для умывания</h2>
-                            <p class="card__description">Интенсивно очищает, не повреждает защитный барьер кожи.</p>
-                            <span class="card__description">Состав:</span>
-
-                            <div class="card__compound compound">
-                                <ul class="compound__list">  
-                                    <li>минералы</li>
-                                    <li>витамины С, А, РР, В И Е</li>
-                                    <li>солнцезащитные компоненты</li>
-                                </ul>
-                            </div>
-                            <div class="price-row">
-                                <b class="prce-label">Цена:</b>
-                                <span class="prce-value">1 650 &#8381;</span>
-                            </div>
-                        </li>    
-                        <li class="products__item card">
-                            <img src="/images/Gift_set_diamaint.jpg" alt="" class="card__image"> 
-                            <span class="card__category">для нормальной кожи</span>
-                            <h2 class="card__name">Подарочный набор № 1</h2>
-                            <p class="card__description">Набор, состоящий из увлажняющего<br>крема и маски.</p>
-                            <span class="card__description">Состав:</span>
-
-                            <div class="card__compound compound"> 
-                                <ul> 
-                                    <li>воски</li>
-                                    <li>минералы</li>
-                                    <li>масла</li>
-                                </ul>
-                            </div>
-                            <div class="price-row">    
-                                <b class="prce-label">Цена:</b>
-                            <span class="prce-value">4 750  &#8381;</span>
-                            </div>
-                        </li>    
-                        <li class="products__item card">
-                            <img src="/images/Gift_Set_Number_Five.jpg" alt="" class="card__image">
-                            <span class="card__category">для нормальной кожи</span>
-                            <h2 class="card__name">Подарочный набор №5</h2>
-                            <p class="card__description">Весь набор средств Invisible symphony крем, маска, мусс и гель для умывания</p>
-                            <span class="card__description">Состав:</span>
-
-                            <div class="card__compound compound"> 
-                                <ul>
-                                    <li>воски</li>
-                                    <li>минералы</li>
-                                    <li>масла</li>
-                                </ul>
-                            </div>
-                            <div class="price-row">    
-                                <b class="prce-label">Цена:</b>
-                                <span class="prce-value">7 520  &#8381;</span>
-                            </div>
-                        </li>    
-                    </ul>
+                            </li>
+                        </template>
+                            <ul class="products clear-list" id="products-list"></ul>
                 </div>
             </main>
             <script type="module" src="main.js"></script>
             <script type="module" src="homework-7.js"></script>
             <script type="module" src="homework-8.js"></script>
             <script type="module" src="homework-9.js"></script>
+            <script type="module" src="homework-10.js"></script>
+            <script type="module" src="products.js"></script>
+            <script type="module" src="./script.js"></script>
         </body>
 </html>
