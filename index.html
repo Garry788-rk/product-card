@@ -1,48 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <title>Каталог товаров</title>
-    </head>
-        <body>
-            <main class="container">
-                <div id="catalog-container">
-                    <h1 class="title catalog-title">Выбери свой продукт</h1>
-                    <button id="color-toggle-button" class="color-button">Переключать цвет</button>
-                    <button id="change-color-all-cards">Сменить цвет всех карточек</button>
-                    <button id="change-color-first-card">Сменить цвет первой карточки</button>
-                    <button id="open-google">Открыть страницу google.com</button>
-                    <button id="output-console-log">Вывести сообщение в консоль</button>
-                        <template id="product-card-template">
-                            <li class="products__item card">
-                                <img src="" alt="" class="card__image">
-                                <span class="card__category"></span>
-                                <h2 class="card__name"></h2>
-                                <p class="card__description"></p>
-                                <span class="card__compound">Состав:</span>
-                            <div class="card__compound compound">
-                                <ul class="compound__list"></ul>
-                            </div>
-                            <div class="price-row">
-                                <b class="price-label">Цена:</b>
-                                <span class="price-value"></span>
-                            </div>
-                            </li>
-                        </template>
-                            <ul class="products clear-list" id="products-list"></ul>
-                </div>
-            </main>
-            <script type="module" src="main.js"></script>
-            <script type="module" src="homework-7.js"></script>
-            <script type="module" src="homework-8.js"></script>
-            <script type="module" src="homework-9.js"></script>
-            <script type="module" src="homework-10.js"></script>
-            <script type="module" src="products.js"></script>
-            <script type="module" src="./script.js"></script>
-        </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Каталог товаров</title>
+  </head>
+  <body>
+    <div class="registration">
+      <button class="registration_button">Регистрация</button>
+    </div>
+
+    <div class="modal">
+      <div class="modal__overlay"></div>
+
+      <div class="modal__content">
+        <button class="modal__close">x</button>
+        <h2 class="modal__title">Регистрация</h2>
+        <form class="registration-form">
+
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="first-name">Имя</label>
+
+            <input class="registration-form__input"
+            id="first-name"
+            type="text"
+            placeholder="Введите имя"
+            required /> 
+          </div>
+
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="sur-name">Фамилия</label>
+
+            <input class="registration-form__input"
+            id="sur-name"
+            type="text"
+            placeholder="Введите фамилию"
+            required /> 
+          </div>
+
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="birth-date">Дата рождения</label>
+
+            <input class="registration-form__input"
+            id="birth-date"
+            type="text"
+            placeholder="Введите дату рождения"
+            required /> 
+          </div>
+          
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="login">Логин</label>
+
+            <input class="registration-form__input"
+            id="login"
+            type="text"
+            placeholder="Введите или придумайте логин"
+            required /> 
+          </div>
+
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="pasword">Пароль</label>
+
+            <input class="registration-form__input"
+            id="pasword"
+            type="text"
+            placeholder="Введите или придумайте пароль"
+            minlength="6"
+            required /> 
+          </div>
+
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="repeat-pasword">Подтверждение пароля</label>
+
+            <input class="registration-form__input"
+            id="repeat-pasword"
+            type="text"
+            placeholder="Введите тот же пароль"
+            minlength="6"
+            required /> 
+          </div>
+
+          <button class="registration-form__button" type="submit">
+            Зарегистрироваться
+          </button>
+        </form>
+    </div>
+
+    <main class="container">
+      <div id="catalog-container">
+        <h1 class="title catalog-title">Выбери свой продукт</h1>
+        <button id="color-toggle-button" class="color-button">
+          Переключать цвет
+        </button>
+        <button id="change-color-all-cards">Сменить цвет всех карточек</button>
+        <button id="change-color-first-card">
+          Сменить цвет первой карточки
+        </button>
+        <button id="open-google">Открыть страницу google.com</button>
+        <button id="output-console-log">Вывести сообщение в консоль</button>
+        <template id="product-card-template">
+          <li class="products__item card">
+            <img src="" alt="" class="card__image" />
+            <span class="card__category"></span>
+            <h2 class="card__name"></h2>
+            <p class="card__description"></p>
+            <span class="card__compound">Состав:</span>
+            <div class="card__compound compound">
+              <ul class="compound__list"></ul>
+            </div>
+            <div class="price-row">
+              <b class="price-label">Цена:</b>
+              <span class="price-value"></span>
+            </div>
+          </li>
+        </template>
+        <ul class="products clear-list" id="products-list"></ul>
+      </div>
+    </main>
+
+
+    
+    <script type="module" src="main.js"></script>
+    <script type="module" src="homework-7.js"></script>
+    <script type="module" src="homework-8.js"></script>
+    <script type="module" src="homework-9.js"></script>
+    <script type="module" src="homework-10.js"></script>
+    <script type="module" src="products.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
 </html>
