@@ -36,14 +36,68 @@
             required /> 
           </div>
 
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="sur-name">Фамилия</label>
 
+            <input class="registration-form__input"
+            id="sur-name"
+            type="text"
+            placeholder="Введите фамилию"
+            required /> 
+          </div>
+
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="birth-date">Дата рождения</label>
+
+            <input class="registration-form__input"
+            id="birth-date"
+            type="text"
+            placeholder="Введите дату рождения"
+            required /> 
+          </div>
+          
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="login">Логин</label>
+
+            <input class="registration-form__input"
+            id="login"
+            type="text"
+            placeholder="Введите или придумайте логин"
+            required /> 
+          </div>
+
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="pasword">Пароль</label>
+
+            <input class="registration-form__input"
+            id="pasword"
+            type="text"
+            placeholder="Введите или придумайте пароль"
+            minlength="6"
+            required /> 
+          </div>
+
+          <div class="registration-form__group">
+            <label class="registration-form__label" 
+            for="repeat-pasword">Подтверждение пароля</label>
+
+            <input class="registration-form__input"
+            id="repeat-pasword"
+            type="text"
+            placeholder="Введите тот же пароль"
+            minlength="6"
+            required /> 
+          </div>
+
+          <button class="registration-form__button" type="submit">
+            Зарегистрироваться
+          </button>
         </form>
     </div>
-
-
-
-
-
 
     <main class="container">
       <div id="catalog-container">
@@ -76,6 +130,9 @@
         <ul class="products clear-list" id="products-list"></ul>
       </div>
     </main>
+
+
+    
     <script type="module" src="main.js"></script>
     <script type="module" src="homework-7.js"></script>
     <script type="module" src="homework-8.js"></script>
