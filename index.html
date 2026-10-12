@@ -14,22 +14,27 @@
   </head>
   <body>
     <div class="registration">
-      <button class="registration_button">Регистрация</button>
+      <button class="registration__button" type="button">Регистрация</button>
     </div>
 
-    <div class="modal">
+    <div class="modal" aria-hidden="true" aria-labelledby="modal-title" role="dialog">
       <div class="modal__overlay"></div>
-      <div class="modal__content">
-        <button class="modal__close">x</button>
-        <h2 class="modal__title">Регистрация</h2>
-        <form class="registration-form">
+      <div class="modal__content" role="document">
+        <button class="modal__close" aria-label="Закрыть модальное окно">×</button>
+        <h2 class="modal__title" id="modal-title">Регистрация</h2>
+        <form class="registration-form" novalidate>
           <div class="registration-form__group">
             <label class="registration-form__label" for="first-name">Имя</label>
             <input class="registration-form__input"
               id="first-name"
               type="text"
+              name="first-name"
               placeholder="Введите имя"
-              required>
+              minlength="2"
+              maxlength="50"
+              required
+              aria-required="true">
+            <div class="form-error" id="first-name-error"></div>
           </div>
 
           <div class="registration-form__group">
@@ -37,8 +42,13 @@
             <input class="registration-form__input"
               id="sur-name"
               type="text"
+              name="sur-name"
               placeholder="Введите фамилию"
-              required>
+              minlength="2"
+              maxlength="50"
+              required
+              aria-required="true">
+            <div class="form-error" id="sur-name-error"></div>
           </div>
 
           <div class="registration-form__group">
@@ -46,7 +56,10 @@
             <input class="registration-form__input"
               id="birth-date"
               type="date"
-              required>
+              name="birth-date"
+              required
+              aria-required="true">
+            <div class="form-error" id="birth-date-error"></div>
           </div>
 
           <div class="registration-form__group">
@@ -54,8 +67,13 @@
             <input class="registration-form__input"
               id="login"
               type="text"
-              placeholder="Введите или придумайте логин"
-              required>
+              name="login"
+              placeholder="Придумайте логин"
+              minlength="3"
+              maxlength="20"
+              required
+              aria-required="true">
+            <div class="form-error" id="login-error"></div>
           </div>
 
           <div class="registration-form__group">
@@ -63,9 +81,15 @@
             <input class="registration-form__input"
               id="password"
               type="password"
-              placeholder="Введите или придумайте пароль"
+              name="password"
+              placeholder="Придумайте пароль"
               minlength="6"
-              required>
+              maxlength="100"
+              required
+              aria-required="true"
+              aria-describedby="password-help">
+            <div class="form-help" id="password-help">Минимум 6 символов</div>
+            <div class="form-error" id="password-error"></div>
           </div>
 
           <div class="registration-form__group">
@@ -73,9 +97,13 @@
             <input class="registration-form__input"
               id="repeat-password"
               type="password"
-              placeholder="Введите тот же пароль"
+              name="repeat-password"
+              placeholder="Повторите пароль"
               minlength="6"
-              required>
+              maxlength="100"
+              required
+              aria-required="true">
+            <div class="form-error" id="repeat-password-error"></div>
           </div>
 
           <button class="registration-form__button" type="submit">
@@ -125,26 +153,29 @@
             У нас самые лучшие продукты для кожи!
           </p>
           <div class="footer__socials">
-            <a href="#" class="footer__social-link">
+            <a href="#" class="footer__social-link" aria-label="Telegram">
               <img src="images/telegram.png" alt="Telegram">
             </a>
-            <a href="#" class="footer__social-link">
+            <a href="#" class="footer__social-link" aria-label="ВКонтакте">
               <img src="images/vk.png" alt="Vkontakte">
             </a>
           </div>
         </div>
 
-        <form class="footer__form">
+        <form class="footer__form" novalidate>
           <h3 class="form__title">Подпишись на наши акции:</h3>
           <div class="input__group">
             <input
               id="email"
               class="footer__input"
               type="email"
+              name="email"
               placeholder="Введи Email..."
-              required>
+              required
+              aria-required="true">
             <button class="footer__button" type="submit">Подписаться</button>
           </div>
+          <div class="form-error" id="email-error"></div>
         </form>
 
         <nav class="footer__nav">
@@ -172,3 +203,4 @@
     <script type="module" src="products.js"></script>
     <script type="module" src="./script.js"></script>
   </body>
+</html>
