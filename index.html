@@ -17,7 +17,7 @@
       <button class="registration__button" type="button">Регистрация</button>
     </div>
 
-    <div class="modal" aria-hidden="true" aria-labelledby="modal-title" role="dialog">
+    <div class="modal" id="registration-modal" role="dialog" aria-modal="true" aria-hidden="true">
       <div class="modal__overlay"></div>
       <div class="modal__content" role="document">
         <button class="modal__close" aria-label="Закрыть модальное окно">×</button>
@@ -34,6 +34,7 @@
               maxlength="50"
               required
               aria-required="true">
+
             <div class="form-error" id="first-name-error"></div>
           </div>
 
@@ -116,15 +117,12 @@
     <main class="container">
       <div id="catalog-container">
         <h1 class="title catalog-title">Выбери свой продукт</h1>
-        <button id="color-toggle-button" class="color-button">
-          Переключать цвет
-        </button>
+        <button id="color-toggle-button" class="color-button">Переключать цвет</button>
         <button id="change-color-all-cards">Сменить цвет всех карточек</button>
-        <button id="change-color-first-card">
-          Сменить цвет первой карточки
-        </button>
+        <button id="change-color-first-card">Сменить цвет первой карточки</button>
         <button id="open-google">Открыть страницу google.com</button>
         <button id="output-console-log">Вывести сообщение в консоль</button>
+
         <template id="product-card-template">
           <li class="products__item card">
             <img src="" alt="" class="card__image">
@@ -141,6 +139,7 @@
             </div>
           </li>
         </template>
+
         <ul class="products clear-list" id="products-list"></ul>
       </div>
     </main>
@@ -149,15 +148,13 @@
       <div class="footer__container">
         <div class="footer__intro">
           <h3 class="intro__title">Product Cards</h3>
-          <p class="intro__description">
-            У нас самые лучшие продукты для кожи!
-          </p>
+          <p class="intro__description">У нас самые лучшие продукты для кожи!</p>
           <div class="footer__socials">
             <a href="#" class="footer__social-link" aria-label="Telegram">
               <img src="images/telegram.png" alt="Telegram">
             </a>
             <a href="#" class="footer__social-link" aria-label="ВКонтакте">
-              <img src="images/vk.png" alt="Vkontakte">
+              <img src="images/vkontakte.png" alt="Vkontakte">
             </a>
           </div>
         </div>
@@ -201,6 +198,5 @@
     <script type="module" src="homework-10.js"></script>
     <script type="module" src="homework-11.js"></script>
     <script type="module" src="products.js"></script>
-    <script type="module" src="./script.js"></script>
   </body>
 </html>
