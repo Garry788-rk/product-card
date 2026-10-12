@@ -1,3 +1,4 @@
+
 // --- Форма подписки в футере ---
 const form = document.querySelector(".footer__form");
 const emailInput = document.querySelector("#email");
@@ -10,9 +11,10 @@ if (form && emailInput) {
     const emailValue = emailInput.value.trim();
     if (validateEmail(emailValue)) {
       console.log({ email: emailValue });
-      showSuccessMessage("Подписка оформлена!");
+      showSuccessMessage("Подписка оформлена!", emailFormSuccess); 
       form.reset();
       if (emailError) emailError.textContent = "";
+      emailInput.classList.remove("error");
     } else {
       showErrorMessage("Введите корректный email");
       if (emailError) {
@@ -28,43 +30,41 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-// --- Модальное окно регистрации ---
+
 const registrationButton = document.querySelector(".registration__button");
 const modal = document.getElementById("registration-modal");
 const modalClose = document.querySelector(".modal__close");
-const repeatPasswordInput = document.getElementById("repeat-password");
 const registrationForm = document.querySelector(".registration-form");
 
-// Поля формы регистрации
 const firstName = document.querySelector("#first-name");
 const surName = document.querySelector("#sur-name");
 const birthDate = document.querySelector("#birth-date");
 const login = document.querySelector("#login");
 const password = document.querySelector("#password");
+const repeatPassword = document.querySelector("#repeat-password"); 
 let user;
 
-// Открытие модалки
+
 if (registrationButton && modal) {
   registrationButton.addEventListener("click", () => {
-    // Сначала делаем элемент доступным для скринридеров
+  
     modal.setAttribute("aria-hidden", "false");
     modal.classList.add("modal-showed");
 
-    // Потом ставим фокус — теперь это безопасно
-    if (repeatPasswordInput) {
-      repeatPasswordInput.focus();
+    const firstInput = modal.querySelector('input[type="text"], input[type="email"], input[type="password"]');
+    if (firstInput) {
+      firstInput.focus();
     }
 
     clearFormErrors();
   });
 }
 
-// Закрытие модалки
 function closeModal() {
   if (!modal) return;
 
   modal.classList.remove("modal-showed");
-  // Скрываем от скринридеров только после того, как убрали видимость
+
   modal.setAttribute("aria-hidden", "true");
 
   if (registrationForm) {
@@ -77,21 +77,18 @@ if (modalClose) {
   modalClose.addEventListener("click", closeModal);
 }
 
-// Закрытие по клику вне модалки (на overlay)
 if (modal) {
   modal.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
   });
 }
 
-// Закрытие по Esc
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal && modal.getAttribute("aria-hidden") === "false") {
     closeModal();
   }
 });
 
-// --- Обработка формы регистрации ---
 if (registrationForm) {
   registrationForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -105,7 +102,7 @@ if (registrationForm) {
         surName: surName.value.trim(),
         birthDate: birthDate.value,
         login: login.value.trim(),
-        password: password.value, // В реальной системе нужно хэшировать
+        password: password.value, 
         createdOn: new Date(),
       };
 
@@ -117,29 +114,25 @@ if (registrationForm) {
   });
 }
 
-// Функция валидации формы
 function validateForm() {
   let isValid = true;
 
-  // Проверка HTML5 валидации
   if (!registrationForm.checkValidity()) {
     showFieldError(registrationForm, "Заполните все обязательные поля корректно");
     isValid = false;
   }
 
-  // Имя
+
   if (firstName && firstName.value.trim().length < 2) {
     showFieldError(firstName, "Имя должно содержать минимум 2 символа");
     isValid = false;
   }
 
-  // Фамилия
   if (surName && surName.value.trim().length < 2) {
     showFieldError(surName, "Фамилия должна содержать минимум 2 символа");
     isValid = false;
   }
 
-  // Дата рождения
   if (birthDate) {
     const birthDateValue = new Date(birthDate.value);
     const today = new Date();
@@ -149,23 +142,18 @@ function validateForm() {
     }
   }
 
-  // Логин
   if (login && login.value.trim().length < 3) {
     showFieldError(login, "Логин должен содержать минимум 3 символа");
     isValid = false;
   }
 
-  // Пароль
   if (password && password.value.length < 6) {
     showFieldError(password, "Пароль должен содержать минимум 6 символов");
     isValid = false;
   }
 
-  // Совпадение паролей
-  const repeatPassword = document.querySelector("#repeat-password");
   if (password && repeatPassword && password.value !== repeatPassword.value) {
     showFieldError(repeatPassword, "Пароли не совпадают");
-    // Не ставим фокус принудительно — это может вызвать проблемы доступности
     isValid = false;
   }
 
@@ -174,7 +162,7 @@ function validateForm() {
 
 // Функции для отображения ошибок и сообщений
 function showFieldError(field, message) {
-  // Ищем блок ошибки рядом с полем по его ID + "-error"
+
   const errorId = field.id + "-error";
   const errorElement = document.getElementById(errorId) || field.parentElement.querySelector(".form-error");
   
@@ -189,10 +177,19 @@ function clearFormErrors() {
   document.querySelectorAll("input").forEach(input => input.classList.remove("error"));
 }
 
+
 function showErrorMessage(message) {
-  alert(`Ошибка: ${message}`);
+  console.error("Ошибка:", message);
+  // Если есть блок для ошибок формы — можно вывести туда
+  const globalError = document.getElementById("global-error");
+  if (globalError) {
+    globalError.textContent = message;
+  } else {
+    alert(`Ошибка: ${message}`); 
+  }
 }
 
 function showSuccessMessage(message) {
-  alert(`Успех: ${message}`);
+  console.log(user);
+  modal.classList.remove("modal-showed");
 }

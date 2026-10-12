@@ -27,36 +27,37 @@ document.addEventListener('DOMContentLoaded', () => {
       firstProduct.style.backgroundColor = blueColorHash;
     });
 
-  if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-      toggleButton.classList.toggle('active');
-    });
-  } else {
-    console.error('Кнопка с id="color-toggle-button" не найдена');
-  }
-
-  function openGoogle() {
-    const answer = confirm('Вы хотите открыть страницу google.com?');
-    if (answer) {
-      window.open('https://www.google.com', '_blank'); // лучше явно указать _blank
+    if (toggleButton) {
+      toggleButton.addEventListener('click', () => {
+        toggleButton.classList.toggle('active');
+      });
+    } else {
+      console.error('Кнопка с id="color-toggle-button" не найдена');
     }
-  }
 
-  if (openGoogleBtn) {
-    openGoogleBtn.addEventListener('click', openGoogle);
-  } else {
-    console.error('Кнопка #open-google не найдена');
-  }
+    function openGoogle() {
+      const answer = confirm('Вы хотите открыть страницу google.com?');
+      if (answer) {
+        window.open('https://www.google.com', '_blank'); // лучше явно указать _blank
+      }
+    }
 
-  function outputConsoleLog(message) {
-    console.log(message);
-  }
+    if (openGoogleBtn) {
+      openGoogleBtn.addEventListener('click', openGoogle);
+    } else {
+      console.error('Кнопка #open-google не найдена');
+    }
 
-  if (outputConsoleLogBtn) {
-    outputConsoleLogBtn.addEventListener('click', () => {
-      outputConsoleLog('homework 6');
-    });
-  } else {
-    console.error('Кнопка #output-console-log не найдена');
+    function outputConsoleLog(message) {
+      console.log(message);
+    }
+
+    if (outputConsoleLogBtn) {
+      outputConsoleLogBtn.addEventListener('click', () => {
+        outputConsoleLog('homework 6');
+      });
+    } else {
+      console.error('Кнопка #output-console-log не найдена');
+    }
   }
 });
